@@ -1,0 +1,13 @@
+run commands:
+	run.sh NumberOfNodes NumberOfTransactions
+	run1.sh : will ask for number of nodes
+	run2.sh NumberOfNodes
+
+Add this to report:
+Each node has a HB thread that replies hback type message when it is alive.
+Each node in before going to state 1 in FSM2, updates its view by using updateView.
+Then, it waits for acks only from it's view.
+Each failed node after waking up updates it's GQ and GLQ from another node. clears only stale messages.
+
+Note: fail probability = 0.001 . I checked the correctness till 0.004
+abort probability: 0.2

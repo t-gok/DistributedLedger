@@ -1,0 +1,1 @@
+python createinput.py $1 $2 > input.txt
